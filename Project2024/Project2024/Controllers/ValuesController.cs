@@ -38,5 +38,31 @@ namespace Project2024.Controllers
         {
             _itemsService.Remove(id);
         }
+
+        [HttpGet("GetCreationDate")]
+
+        public DateTime GetCreationDate(int id)
+        {
+            if (id>0)
+            {
+                DateTime dateTime = _itemsService.GetCreationDate(id);
+                return dateTime;
+            }
+            else throw new ArgumentException("Invalid ID format.");
+
+        }
+
+        [HttpGet("GetExpirationDate")]
+
+        public DateTime GetExpirationDate(int id)
+        {
+            if (id > 0)
+            {
+                DateTime dateTime = _itemsService.GetExpirationDate(id);
+                return dateTime;
+            }
+            else throw new ArgumentException("Invalid ID format.");
+
+        }
     }
 }

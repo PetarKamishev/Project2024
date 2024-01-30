@@ -8,7 +8,8 @@
         public string? Description { get; set; }
         public string? Brand { get; set; }   
         public int Quantity { get; set; }
-
+        public DateTime CreationDate { get; set; } 
+        public DateTime ExpirationDate { get; set; }
         public decimal Price { get; set; }
     }
 }

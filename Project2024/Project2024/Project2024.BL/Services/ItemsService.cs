@@ -1,5 +1,6 @@
 ﻿using Project2024.Project2024.BL.Interfaces;
 using Project2024.Project2024.DL.Interfaces;
+using Project2024.Project2024.DL.MemoryDb;
 using Project2024.Project2024.Models;
 
 namespace Project2024.Project2024.BL.Services
@@ -30,6 +31,16 @@ namespace Project2024.Project2024.BL.Services
         public void Remove (int id)
         {
             _itemsRepository.Remove(id);
+        }
+
+        public DateTime GetCreationDate(int id)
+        {
+            return InMemoryDb.ItemsData.FirstOrDefault(x => x.Id == id).CreationDate;
+        }
+
+        public DateTime GetExpirationDate(int id)
+        {
+            return InMemoryDb.ItemsData.FirstOrDefault(x => x.Id == id).ExpirationDate;
         }
     }
 }

@@ -13,7 +13,9 @@ namespace Project2024.Project2024.DL.MemoryDb
                 Price = 1.60M,
                 Quantity = 10,
                 Description ="Food",
-                Brand=" "
+                Brand=" ",
+                CreationDate = DateTime.Now,
+                ExpirationDate = new DateTime(2024,02,11)
             },
               new Items()
             {
@@ -22,7 +24,9 @@ namespace Project2024.Project2024.DL.MemoryDb
                 Price = 5,
                 Quantity = 10,
                 Description ="Water",
-                Brand="Devin"
+                Brand="Devin",
+                CreationDate= DateTime.Now,
+                ExpirationDate= new DateTime(2024,05,20)
             },
                 new Items()
             {
@@ -31,7 +35,9 @@ namespace Project2024.Project2024.DL.MemoryDb
                 Price = 4,
                 Quantity = 30,
                 Description ="Fruits",
-                Brand=" "
+                Brand=" ",
+                CreationDate = DateTime.Now,
+                ExpirationDate= new DateTime(2024,02,11)
             }
         };
     }

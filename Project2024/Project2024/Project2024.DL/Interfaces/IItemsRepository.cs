@@ -9,5 +9,9 @@ namespace Project2024.Project2024.DL.Interfaces
         void Add(Items items);
         void Remove(int id);
 
+        DateTime GetCreationDate(int id);
+
+        DateTime GetExpirationDate (int id);
+
     }
 }
