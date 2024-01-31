@@ -19,6 +19,8 @@ namespace Project2024
             builder.Services.AddSwaggerGen();
             builder.Services.AddSingleton<IItemsRepository, ItemsRepository>();
             builder.Services.AddSingleton<IItemsService, ItemsService>();
+            builder.Services.AddSingleton<IBrandsRepository, BrandsRepository>();
+            builder.Services.AddSingleton<IBrandsService, BrandsService>();
 
 
 
