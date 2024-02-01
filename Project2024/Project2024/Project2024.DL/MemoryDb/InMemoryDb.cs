@@ -14,6 +14,7 @@ namespace Project2024.Project2024.DL.MemoryDb
                 Quantity = 10,
                 Description ="Food",
                 Brand="Pirina",
+                BrandId=1,
                 CreationDate = DateTime.Now,
                 ExpirationDate = new DateTime(2024,02,11)
             },
@@ -25,6 +26,7 @@ namespace Project2024.Project2024.DL.MemoryDb
                 Quantity = 10,
                 Description ="Water",
                 Brand="Devin",
+                BrandId=2,
                 CreationDate= DateTime.Now,
                 ExpirationDate= new DateTime(2024,05,20)
             },
@@ -36,8 +38,9 @@ namespace Project2024.Project2024.DL.MemoryDb
                 Quantity = 30,
                 Description ="Fruits",
                 Brand="ApplesCompany",
+                BrandId=3,
                 CreationDate = DateTime.Now,
-                ExpirationDate= new DateTime(2024,02,11)
+                ExpirationDate= new DateTime(2024,02,11)    
             }
         };
 

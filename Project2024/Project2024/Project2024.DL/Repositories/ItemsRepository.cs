@@ -34,5 +34,12 @@ namespace Project2024.Project2024.DL.Repositories
         {
             return InMemoryDb.ItemsData.FirstOrDefault(x => x.Id == id).ExpirationDate;
         }
+
+        public List<Items> GetAllByBrand(int brandId)
+        {
+            return InMemoryDb.ItemsData
+                .Where(b => b.BrandId == brandId)
+                .ToList();
+        }
     }
 }

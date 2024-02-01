@@ -42,5 +42,12 @@ namespace Project2024.Project2024.BL.Services
         {
             return InMemoryDb.ItemsData.FirstOrDefault(x => x.Id == id).ExpirationDate;
         }
+
+        public List<Items> GetAllByBrandBeforeDate(int brandId, DateTime beforeDate)
+        {
+            var result = _itemsRepository.GetAllByBrand(brandId);
+
+            return result.Where(b => b.ExpirationDate <= beforeDate).ToList();
+        }
     }
 }

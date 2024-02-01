@@ -12,5 +12,7 @@ namespace Project2024.Project2024.BL.Interfaces
         DateTime GetCreationDate(int id);
 
         DateTime GetExpirationDate(int id);
+
+        public List<Items>GetAllByBrandBeforeDate(int brandId, DateTime BeforeDate);
     }
 }

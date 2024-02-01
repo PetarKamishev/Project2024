@@ -21,7 +21,7 @@ namespace Project2024
             builder.Services.AddSingleton<IItemsService, ItemsService>();
             builder.Services.AddSingleton<IBrandsRepository, BrandsRepository>();
             builder.Services.AddSingleton<IBrandsService, BrandsService>();
-
+            builder.Services.AddSingleton<IStoreService, StoreService>();
 
 
             var app = builder.Build();

@@ -13,5 +13,7 @@ namespace Project2024.Project2024.DL.Interfaces
 
         DateTime GetExpirationDate (int id);
 
+        List<Items> GetAllByBrand(int brandId);
+
     }
 }
