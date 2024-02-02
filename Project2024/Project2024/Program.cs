@@ -2,6 +2,8 @@ using Project2024.Project2024.BL.Interfaces;
 using Project2024.Project2024.BL.Services;
 using Project2024.Project2024.DL.Interfaces;
 using Project2024.Project2024.DL.Repositories;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 
 namespace Project2024
 {
@@ -22,6 +24,10 @@ namespace Project2024
             builder.Services.AddSingleton<IBrandsRepository, BrandsRepository>();
             builder.Services.AddSingleton<IBrandsService, BrandsService>();
             builder.Services.AddSingleton<IStoreService, StoreService>();
+            builder.Services.AddFluentValidationAutoValidation();
+            builder.Services.AddValidatorsFromAssemblyContaining(typeof(Program));
+            builder.Services.AddHealthChecks();
+            
 
 
             var app = builder.Build();
@@ -32,7 +38,7 @@ namespace Project2024
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
+            app.MapHealthChecks("/healthz");
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
