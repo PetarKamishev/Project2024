@@ -24,5 +24,12 @@ namespace Project2024.Project2024.BL.Services
             };
             return response;
         }
+
+        public int CheckItemsCount(int input)
+        {
+            if (input < 0) return 0;
+            var itemsCount = _itemsService.GetAll();
+            return itemsCount.Count + input;
+        }
     }
 }
